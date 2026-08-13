@@ -32,7 +32,7 @@ The UI follows the HH Goa “tropical retro” aesthetic:
 - **Live Preview** — instant updates as you type.
 - **High-Res Export** — download the card as a 2× or 3× PNG.
 - **X Share** — one-click share to X with pre-filled copy.
-- **Team Frame Builder** — group 2–6 builders into a single themed frame.
+- **Team Frame Builder** — group 2–3 builders into a single themed frame.
 
 ## Development
 
