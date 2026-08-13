@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { toPng } from "html-to-image";
-import { Download, Plus, RotateCcw, Sparkles, Trash2, Twitter, Users } from "lucide-react";
+import { Download, Plus, RotateCcw, Sparkles, Trash2, Users, X as XIcon } from "lucide-react";
 import {
   builderCode,
   cleanHandle,
@@ -56,7 +56,6 @@ async function exportNode(node: HTMLElement, filename: string) {
   const dataUrl = await toPng(node, {
     pixelRatio: 3,
     cacheBust: true,
-    backgroundColor: undefined,
   });
   const a = document.createElement("a");
   a.href = dataUrl;
@@ -213,7 +212,7 @@ function Index() {
                 {busy === "card" ? "EXPORTING…" : "DOWNLOAD ID CARD"}
               </HHButton>
               <HHButton tone="outline" onClick={shareOnX}>
-                <Twitter className="h-3.5 w-3.5" /> SHARE ON X
+                <XIcon className="h-3.5 w-3.5" /> SHARE ON X
               </HHButton>
               <HHButton
                 tone="outline"
