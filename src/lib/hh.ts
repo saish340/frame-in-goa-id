@@ -27,7 +27,7 @@ export const emptyBuilder: Builder = {
 };
 
 export const sampleBuilder: Builder = {
-  name: "Saish Vikas",
+  name: "Saish Malgundkar",
   handle: "@saish____",
   stack: "AI / ML Builder",
   builderClass: "AI Architect",
