@@ -151,7 +151,7 @@ function Index() {
             <div className="grid gap-6 sm:grid-cols-2">
               <HHField
                 label="Full Name"
-                placeholder="Saish Vikas"
+                placeholder="Saish Malgundkar"
                 value={builder.name}
                 onChange={(e) => set("name")(e.target.value)}
               />
