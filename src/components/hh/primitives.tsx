@@ -10,11 +10,11 @@ export function HHButton({ tone = "solid", className, children, ...rest }: BtnPr
     <button
       {...rest}
       className={cn(
-        "label-mono ribbon-frame inline-flex items-center justify-center gap-2 px-6 py-3.5 font-bold transition-all duration-200 active:translate-y-px disabled:opacity-45",
+        "label-mono inline-flex items-center justify-center gap-2 px-6 py-3.5 font-bold transition-all duration-200 active:translate-y-px disabled:opacity-45",
         tone === "solid" &&
-          "bg-primary text-primary-foreground hover:brightness-110 hover:shadow-[5px_5px_0_0_var(--ink)]",
+          "ribbon-frame bg-primary text-primary-foreground hover:brightness-110 hover:shadow-[5px_5px_0_0_var(--ink)]",
         tone === "pink" &&
-          "bg-accent text-accent-foreground hover:brightness-110 hover:shadow-[5px_5px_0_0_var(--ink)]",
+          "ribbon-frame bg-accent text-accent-foreground hover:brightness-110 hover:shadow-[5px_5px_0_0_var(--ink)]",
         tone === "outline" &&
           "border border-border bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground",
         className,

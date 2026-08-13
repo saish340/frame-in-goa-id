@@ -25,10 +25,10 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
         {/* masthead */}
         <div className="flex items-start justify-between border-b border-border pb-3">
           <div>
-            <p className="font-display text-[2.1rem] leading-[0.82] font-bold tracking-tight text-primary">
+            <p className="font-display text-[1.85rem] leading-[0.82] font-bold tracking-tight text-primary">
               HH GOA
             </p>
-            <p className="font-display text-[2.1rem] leading-[0.86] font-bold tracking-tight text-primary">
+            <p className="font-display text-[1.85rem] leading-[0.86] font-bold tracking-tight text-primary">
               2026
             </p>
             <p className="label-mono text-muted-foreground pt-1.5 text-[9px]">HACKER HOUSE GOA</p>
@@ -42,8 +42,8 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
         </div>
 
         {/* photo */}
-        <div className="relative mt-4 border-2 border-primary/70 bg-ink/70">
-          <div className="relative w-full overflow-hidden" style={{ aspectRatio: "1 / 1" }}>
+        <div className="relative mt-3 border-2 border-primary/70 bg-ink/70">
+          <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4 / 3" }}>
             {data.photo ? (
               <img
                 src={data.photo}
@@ -53,7 +53,7 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
               />
             ) : (
               <div className="grid h-full w-full place-items-center gap-2">
-                <UserRound className="text-primary/35 h-14 w-14" />
+                <UserRound className="text-primary/35 h-12 w-12" />
               </div>
             )}
             <div
@@ -70,8 +70,8 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
         </div>
 
         {/* identity */}
-        <div className="pt-4">
-          <p className="font-display text-[1.6rem] leading-[0.95] font-bold text-primary">
+        <div className="pt-3">
+          <p className="font-display text-[1.5rem] leading-[0.95] font-bold text-primary">
             {up(data.name, "YOUR NAME")}
           </p>
           <p className="label-mono text-accent pt-1.5 text-[10px] font-bold">
@@ -79,19 +79,19 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
           </p>
         </div>
 
-        <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2.5 border-y border-border py-3">
+        <div className="mt-2.5 grid grid-cols-2 gap-x-3 gap-y-2 border-y border-border py-2.5">
           <Meta k="STACK / ROLE" v={up(data.stack, "—")} />
           <Meta k="CLASS" v={up(data.builderClass, "—")} />
           <Meta k="LOCATION" v={up(data.location, "—")} />
           <Meta k="EDITION" v="28–31 OCT" />
         </div>
 
-        <p className="label-mono text-muted-foreground pt-3 text-[9px] normal-case tracking-[0.08em] italic">
+        <p className="label-mono text-muted-foreground pt-2.5 text-[9px] normal-case tracking-[0.08em] italic">
           {data.tagline.trim() || "Building in public."}
         </p>
 
         {/* footer */}
-        <div className="mt-auto flex items-end justify-between pt-4">
+        <div className="mt-auto flex items-end justify-between pt-3">
           <div>
             <p className="label-mono text-muted-foreground text-[8px]">BUILDER ID NO.</p>
             <p className="label-mono pt-1 text-[11px] font-bold text-primary">{code}</p>
