@@ -21,14 +21,14 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
       <div className="grid-canvas absolute inset-0" />
       <div className="sun-rays absolute -bottom-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full" />
 
-      <div className="relative flex h-full flex-col p-[5.5%]">
+      <div className="relative flex h-full flex-col p-[4.5%]">
         {/* masthead */}
-        <div className="flex items-start justify-between border-b border-border pb-3">
+        <div className="flex items-start justify-between border-b border-border pb-2.5">
           <div>
-            <p className="font-display text-[1.85rem] leading-[0.82] font-bold tracking-tight text-primary">
+            <p className="font-display text-[1.5rem] leading-[0.82] font-bold tracking-tight text-primary">
               HH GOA
             </p>
-            <p className="font-display text-[1.85rem] leading-[0.86] font-bold tracking-tight text-primary">
+            <p className="font-display text-[1.5rem] leading-[0.86] font-bold tracking-tight text-primary">
               2026
             </p>
             <p className="label-mono text-muted-foreground pt-1.5 text-[9px]">HACKER HOUSE GOA</p>
@@ -43,7 +43,7 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
 
         {/* photo */}
         <div className="relative mt-3 border-2 border-primary/70 bg-ink/70">
-          <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4 / 3" }}>
+          <div className="relative w-full overflow-hidden" style={{ aspectRatio: "3 / 2" }}>
             {data.photo ? (
               <img
                 src={data.photo}
@@ -53,7 +53,7 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
               />
             ) : (
               <div className="grid h-full w-full place-items-center gap-2">
-                <UserRound className="text-primary/35 h-12 w-12" />
+                <UserRound className="text-primary/35 h-10 w-10" />
               </div>
             )}
             <div
@@ -71,7 +71,7 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
 
         {/* identity */}
         <div className="pt-3">
-          <p className="font-display text-[1.5rem] leading-[0.95] font-bold text-primary">
+          <p className="font-display text-[1.3rem] leading-[0.95] font-bold text-primary">
             {up(data.name, "YOUR NAME")}
           </p>
           <p className="label-mono text-accent pt-1.5 text-[10px] font-bold">
@@ -102,7 +102,7 @@ export const BuilderCard = forwardRef<HTMLDivElement, { data: Builder }>(functio
           <div className="bg-primary p-1.5">
             <QRCodeSVG
               value={`https://x.com/${handle || "hackerhousegoa"}`}
-              size={54}
+              size={46}
               bgColor="transparent"
               fgColor="#1c3f2b"
               level="M"
