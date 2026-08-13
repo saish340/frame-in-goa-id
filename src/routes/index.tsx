@@ -262,12 +262,12 @@ function Index() {
                   Team Frame
                 </h2>
               </div>
-              <p className="label-mono text-muted-foreground pt-3">2 – 6 BUILDERS · ONE FRAME</p>
+              <p className="label-mono text-muted-foreground pt-3">2 – 3 BUILDERS · ONE FRAME</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <HHButton
                 tone="outline"
-                disabled={members.length >= 6}
+                disabled={members.length >= 3}
                 onClick={() => setMembers((m) => [...m, newMember()])}
               >
                 <Plus className="h-3.5 w-3.5" /> ADD MEMBER
