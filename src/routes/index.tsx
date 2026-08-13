@@ -300,7 +300,7 @@ function Index() {
                 <div key={m.id} className="border-t border-border pt-6">
                   <div className="label-mono flex items-center justify-between pb-4">
                     <span className="text-primary font-bold">MEMBER {String(i + 1).padStart(2, "0")}</span>
-                    {members.length > 2 && (
+                    {members.length > 1 && (
                       <button
                         onClick={() => setMembers((all) => all.filter((x) => x.id !== m.id))}
                         className="text-muted-foreground hover:text-accent inline-flex items-center gap-1.5 transition-colors"
@@ -356,6 +356,25 @@ function Index() {
 
             <motion.div {...fadeUp} className="lg:sticky lg:top-10 lg:self-start">
               <TeamFrameCard ref={teamRef} teamName={teamName} members={members} />
+              <div className="flex flex-wrap gap-3 pt-6">
+                <HHButton
+                  tone="pink"
+                  disabled={busy === "team"}
+                  onClick={() =>
+                    download(
+                      teamRef,
+                      `HHGOA-Team-Frame-${teamName.trim().replace(/\s+/g, "-").toLowerCase() || "team"}.png`,
+                      "team",
+                    )
+                  }
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  {busy === "team" ? "EXPORTING…" : "DOWNLOAD TEAM ID"}
+                </HHButton>
+                <HHButton tone="outline" onClick={shareOnX}>
+                  <XIcon className="h-3.5 w-3.5" /> SHARE ON X
+                </HHButton>
+              </div>
             </motion.div>
           </div>
         </div>
