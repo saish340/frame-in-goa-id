@@ -1,6 +1,6 @@
 # HH Goa 2026 — #FrameInGoa Task 1: Builder ID Card Generator
 
-An official-style ID card generator for the **HH Goa 2026** hackathon, built with the visual language of [hhgoa.com](https://hhgoa.com/). Create a personal builder pass, generate a shareable QR code, and compose team frames for 2–6 members.
+An official-style ID card generator for the **HH Goa 2026** hackathon, built with the visual language of [hhgoa.com](https://hhgoa.com/). Create a personal builder pass, generate a shareable QR code, and compose team frames for 1-3 members.
 
 Live preview: [https://frame-in-goa-id.lovable.app](https://frame-in-goa-id.lovable.app)
 
